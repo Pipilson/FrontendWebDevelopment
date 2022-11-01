@@ -1,0 +1,41 @@
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>Exemplo</title>
+		
+		<style>
+			button {
+				background-color: transparent;
+				border: 2px solid navy;
+				padding: 16px;
+				font-size: 1.4rem;
+			}
+
+			button:hover{
+				background-color: navy;
+				/*border: none;*/
+				color: white;
+				cursor: pointer;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<button>APERTE</button>
+		<div class="container"></div>
+
+		<script>
+			function onClickEvent(){
+				const el = document.createElement('p');
+				el.innerText = 'Apertou o botão';
+				document.querySelector(".container").appendChild(el);
+			}
+
+			document.querySelector('button').onclick = onClickEvent;
+		</script>
+
+	</body>
+</html>
