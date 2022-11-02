@@ -74,3 +74,10 @@ if (20 === 20) {
 } else {
     resultado2 = 'values do not match';
 }
+
+/*
+&& //AND
+|| //OR
+!  //NOT
+//JavaScript não tem o XOR? ^ só funciona com números?
+*/
