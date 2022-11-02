@@ -1,1 +1,1 @@
-![Desafio](./desafio2.png)
+![Desafio](img/desafio2.png)
