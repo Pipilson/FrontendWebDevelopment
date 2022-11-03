@@ -81,3 +81,146 @@ if (20 === 20) {
 !  //NOT
 //JavaScript não tem o XOR? ^ só funciona com números?
 */
+
+switch (key) {
+    case value:
+        
+        break;
+
+    default:
+        break;
+}
+//switch case > um monte de else if
+
+function funcao(){
+    console.log('oi'); //declara a função
+}
+
+(function funcao(){
+    console.log('oi'); //declara a função e já chama ela
+})(); //colocar em mais um () e outro () pra chamar a função
+
+function funcao(parametro1, parametro2){
+    console.log(parametro1);
+    console.log(parametro2);
+}
+
+funcao(20, 'oi'); //printa 20 e 'oi'
+
+const arrowFunction = () => {
+    console.log('arrow'); //já atribui a função pra uma variavel
+}
+
+const returnFunciton = () => {
+    //return 20; //pra retornar algo
+    const a = 20;
+    return a;
+}
+//-------------------------------
+function myFunction(){
+    return 20;
+}
+
+const myObj = {
+    prop1: 50,
+    prop2: myFunction
+}
+
+myObj.prop2 //myFunction()
+myObj.prop2() //20
+
+const string = 'papilson';
+string.replace('a', 'i');
+//-------------------------------
+
+function myFunction(num){
+    return num * 2;
+} //normal
+
+/* function (num) {
+    return num * 2;
+} //anonima */
+
+(num) => {
+    return num * 2;
+} //arrow
+
+num => num * 2; //simplificado
+
+let regex = new RegExp("gato");
+regex = /gato/;
+regex = /[A-Z]/; //ABCDEFGHIJKLMNOPQRSTUVWXYZ
+regex = /[0-9]/; //01234567890
+regex = /[A-Za-z0-9]/; //ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+regex = /[A-Za-z0-9 ]/; //ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789' '
+regex = /./; //Qualquer caractere
+regex = /\d/; //Qualquer número
+regex = /\s/; //Qualquer espaço
+regex = /\w/; //Qualquer letra e número (alfanumérico)
+regex = /^/; /*Começo da string*/ regex = /^f/; //Começa com a letra 'f'?
+regex = /$/; /*Final da string*/ regex = /f$/; //Termina com a letra 'f'?
+regex = /gato|gatito/; //gato ou gatito
+
+const str = 'my favorite food is steak';
+/[a-z]/.exec(str);  //Array["m"]
+/[a-z]*/.exec(str); //Array["my"] -- procura [a-z] 0 ou mais vezes
+/[a-z]+/.exec(str); //Array["my"] -- procura [a-z] 1 ou mais vezes
+/[a-z]?/.exec(str); //Array["m"]  -- procura 0 ou 1
+
+/[a-z ]+/.exec(str);   //Array["my favorite food is steak"]
+/[a-z ]{5}/.exec(str); //Array["my fa"]
+/[a-z ]{2,6}/.exec(str); //Array["my fav"]
+
+//--FLAGS--//
+regex = /./g; //Global search
+regex = /./i; //Case sensitive search
+regex = /./m; //Multi-line Search
+regex = /./s;
+regex = /./u;
+regex = /./y;
+//-----------
+
+const bdString = string.replaceAll('Dog', 'cat'); //Troca Dog --> cat; NÃO troca dog --> cat
+const okString = string.replaceAll(/Dd{1}og/g, 'cat') //Troca (D|d)og todas as vezes que aparecer (g) --> cat
+
+string = 'some string';
+string[0].toUpperCase(); //S
+string[0].toUpperCase() + string.substring(1); //Some string
+string[0].toUpperCase() + string.substring(1, string.length); //Some string
+
+let arr = [1, 2, 3, 5, 6];
+arr.pop(); // arr = [1, 2, 3, 5]
+arr.pop(); // arr = [1, 2, 3]
+arr.push(4,5,6); // arr = [1, 2, 3, 4, 5, 6]
+arr.unshift(0); // arr = [0, 1, 2, 3, 4, 5, 6]
+let copyArr = arr.slice(); // copyArr = [0, 1, 2, 3, 4, 5, 6]
+copyArr = arr.slice(3); // copyArr = [3, 4, 5, 6]
+//slice faz uma cópia do array, splice modifica o array
+arr = [1, 2, 3, 'oops', 4, 5, 6];
+arr.splice(3, 1); // arr = [1, 2, 3, 4, 5, 6]
+arr = [1, 2, 3, 'oops', 4, 5, 6];
+arr.splice(3, 1, 3.5); // arr = [1, 2, 3, 3.5, 4, 5, 6]
+arr.indexOf(3.5); //3
+arr[arr.indexOf(3.5)] //3.5
+
+arr = [1, 2, 3];
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);  
+} //1, 2, 3
+
+arr.forEach(arrItem => {
+    console.log(arrItem);
+}) //1, 2, 3
+
+let myColors = ['blue', 'red', 'purple', 'orange', 'green'];
+//tem orange?
+let orangeExists = false
+myColors.forEach(color =>{
+    if(color === 'orange'){
+        orangeExists = true;
+    }
+}) //true
+
+myColors.includes('orange'); //true
+
+myColors.indexOf('orange') !== -1; //true
