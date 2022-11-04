@@ -224,3 +224,27 @@ myColors.forEach(color =>{
 myColors.includes('orange'); //true
 
 myColors.indexOf('orange') !== -1; //true
+
+
+let randomNumber = Math.random(); //valor entre 0 e 1
+randomNumber * 5; //valor entre 0 e 5
+
+arr = ['some', 'values', 'in', 'array'];
+const randomIndex = Math.floor(Math.random() * arr.length);
+
+
+//Error handling
+try{
+    let num = 20;
+    num.toUpperCase();
+} catch (error){
+    console.log(error instanceof TypeError); //true
+    console.log(error.message); //num.toUpperCase is not a function
+}
+
+//NaN - Not a Number
+Number('30'); //30
+Number('oi'); //NaN
+
+//undefined - variavel que não recebeu valor
+//null
