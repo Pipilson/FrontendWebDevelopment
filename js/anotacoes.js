@@ -1,3 +1,8 @@
+/* ESTUDAR MAIS:
+--CallBack Function
+--RegEx
+*/
+
 const minhaPrimeiraVariavel = 10; //Camel case é preferível
 const minhaString = 'string' //"" também funciona, porém '' é preferível
 
@@ -150,7 +155,7 @@ num => num * 2; //simplificado
 let regex = new RegExp("gato");
 regex = /gato/;
 regex = /[A-Z]/; //ABCDEFGHIJKLMNOPQRSTUVWXYZ
-regex = /[0-9]/; //01234567890
+regex = /[0-9]/; //0123456789
 regex = /[A-Za-z0-9]/; //ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
 regex = /[A-Za-z0-9 ]/; //ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789' '
 regex = /./; //Qualquer caractere
