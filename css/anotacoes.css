@@ -1,0 +1,39 @@
+#id{
+
+}
+
+.class{
+
+}
+
+.classOUid p{ /* todos p na classe ou id */
+
+}
+
+.classOUid > p{ /* filhos p da classe ou id */
+
+}
+
+ul + p{ /* irmãos p de ul */
+
+}
+
+ul ~ p{ /* irmãos p de ul */
+
+}
+
+p[class="classe"]{ /* p com essa classe */
+
+}
+
+button:hover{ /* psedoclasse */
+
+}
+
+p{
+ color: red !important; /* maior prioridade possível */   
+}
+
+*{
+    /* tudo */
+}
